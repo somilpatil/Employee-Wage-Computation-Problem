@@ -4,15 +4,20 @@ import java.util.Random;
 public class EmpWage  {
 	public static void main(String[] args) {
 		Random rd = new Random();
-		int empcheck = rd.nextInt(2);
-		int wagePerHour = 20;
-		int workHrs = 8;
+		int empcheck = rd.nextInt(3);
+		int wagePerHr= 20;
+		int fullTimeWorkHrs= 8;
+		int partTimeWorkHrs= 4;
 		if(empcheck==1) {
-			System.out.println("Employee is Present");
-			System.out.println(wagePerHour * workHrs);
+			System.out.println("FullTime Wage");
+			System.out.println( wagePerHr * fullTimeWorkHrs );
+		}
+		else if(empcheck==2) {
+			System.out.println("PartTime Wage");
+			System.out.println( wagePerHr * partTimeWorkHrs);
 		}
 		else {
-			System.out.println("Employee is Absent");
+			System.out.println("Salary = 0");
 		}
 	}
 }
