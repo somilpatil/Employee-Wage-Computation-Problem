@@ -5,20 +5,22 @@ public class EmpWage  {
 	public static void main(String[] args) {
 		Random rd = new Random();
 		int empcheck = rd.nextInt(3);
+		int totalWorkingDays = 20;
 		int wagePerHr = 20;
 		int fullTimeWorkHrs = 8;
 		int partTimeWorkHrs = 4;
-		switch(empcheck) {
+		switch (empcheck) {
 		case 1:
-			System.out.println("Salary of Fulltime Employee");
-			System.out.println( wagePerHr * fullTimeWorkHrs);
-		break;
+			System.out.println("Month Salary of FullTime Employee");
+			System.out.println((fullTimeWorkHrs  *  wagePerHr) * totalWorkingDays  );
+			break;
 		case 2:
-			System.out.println("Salary of Parttime Employee");
-			System.out.println( wagePerHr * partTimeWorkHrs );
-		break;
+			System.out.println("Month Salary of PartTime Employee");
+			System.out.println( (partTimeWorkHrs  *  wagePerHr) * totalWorkingDays  );
+			break;
 		default:
-			System.out.println("Salary = 0");
+			System.out.println("Salary=0");
+		
 		}
 	}
 }
