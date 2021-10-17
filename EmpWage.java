@@ -3,24 +3,43 @@ package com.bl;
 import java.util.Random;
 public class EmpWage  {
 	public static void main(String[] args) {
-		Random rd = new Random();
-		int empcheck = rd.nextInt(3);
-		int totalWorkingDays = 20;
-		int wagePerHr = 20;
-		int fullTimeWorkHrs = 8;
-		int partTimeWorkHrs = 4;
-		switch (empcheck) {
-		case 1:
-			System.out.println("Month Salary of FullTime Employee");
-			System.out.println((fullTimeWorkHrs  *  wagePerHr) * totalWorkingDays  );
-			break;
-		case 2:
-			System.out.println("Month Salary of PartTime Employee");
-			System.out.println( (partTimeWorkHrs  *  wagePerHr) * totalWorkingDays  );
-			break;
-		default:
-			System.out.println("Salary=0");
-		
+		public static final int isPresent=1;
+		public static final int isAbsent=0;
+		public static final int isFullTime=8;
+		public static final int isPartTime=4;
+		public static final int wagePerHour=20;
+		public static final int numberOfWorkingDays=20;
+		public static int dailyWage=0;
+		public static int monthlyWage=0;
+		public static int totalHours=0;
+		public static int hours=0;
+		public static void main(String[] args) {
+			System.out.println("Welcome to Employee Wage Computation program");
+			for( int i=0; i<numberOfWorkingDays
+					
+					&& totalHours<100; i++) {
+				Random random = new Random();
+				int Emp_check = random.nextInt(3);
+				switch (Emp_check) {
+				case isPresent: {
+					System.out.println("Employee is present");
+					dailyWage = isFullTime * wagePerHour; hours=isFullTime;
+					break;
+				} 
+				case isAbsent: {
+					System.out.println("Employee is Absent");
+					break;
+				} 
+				default: {
+					System.out.println("Employee is part time ");
+					dailyWage = isPartTime * wagePerHour;
+					hours=isPartTime; break;
+				} 
+		       } 
+				monthlyWage = dailyWage + monthlyWage;
+				totalHours = hours + totalHours;
+		  } System.out.println("Daily wage : " + dailyWage);
+			System.out.println("Monthly wage : " +monthlyWage);
 		}
 	}
 }
